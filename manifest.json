@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "ADHD Reading Assistant",
+  "version": "1.0",
+  "description": "ADHD Reading Assistant powered by AI.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
