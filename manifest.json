@@ -1,13 +1,28 @@
 {
   "manifest_version": 3,
-  "name": "ADHD Reading Assistant",
+  "name": "ADHD Reader",
   "version": "1.0",
-  "description": "ADHD Reading Assistant powered by AI.",
+  "description": "ADHD Reader powered by Gemini.",
   "action": {
     "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
   ]
 }
